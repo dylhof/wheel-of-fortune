@@ -1,0 +1,24 @@
+{
+  "name": "wheel-of-fortune",
+  "version": "1.0.0",
+  "description": "Wheel of Fortune game by Shannon Moranetz and Dylan Hofmann",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylhof/wheel-of-fortune.git"
+  },
+  "author": "Shannon Moranetz and Dylan Hofmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylhof/wheel-of-fortune/issues"
+  },
+  "homepage": "https://github.com/dylhof/wheel-of-fortune#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "mocha": "^5.2.0"
+  }
+}
