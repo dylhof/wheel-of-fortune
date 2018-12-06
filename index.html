@@ -8,11 +8,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <h1>Wheel of Fortune!</h1>
+  <form>
+    <label for="player1">Player 1 Name:</label>
+    <input type="text" name="player1" id="player1">
+    <label for="player2">Player 2 Name:</label>
+    <input type="text" name="player2" id="player2">
+    <label for="player3">Player 3 Name:</label>
+    <input type="text" name="player3" id="player3">
+    <button type="submit" class="submit-button">Submit</button>
+  </form>
+  <p class="player player1"> Player 1 score: <span class="player1-score">0</span></p>
+  <p class="player player2"> Player 2 score: <span class="player2-score">0</span></p>
+  <p class="player player3"> Player 3 score: <span class="player3-score">0</span></p>
 
 
 
-
-
-<script src="domUpdates.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/data.js"></script>
+<script type="text/javascript" src="domUpdates.js"></script>
+<script type="text/javascript" src="lib/Player.js"></script>
+<script type="text/javascript" src="lib/main.js"></script>
 </body>
 </html>
