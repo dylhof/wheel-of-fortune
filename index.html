@@ -21,8 +21,15 @@
   <p class="player player1"> Player 1 score: <span class="player1-score">0</span></p>
   <p class="player player2"> Player 2 score: <span class="player2-score">0</span></p>
   <p class="player player3"> Player 3 score: <span class="player3-score">0</span></p>
-
-
+  <button class="turn-option-button spin-button">spin</button>
+  <button class="turn-option-button vowel-button">buy vowel</button>
+  <button class="turn-option-button solve-button">solve puzzle</button>
+  <form>
+    <input type="text" id="puzzle-guess">
+    <button type="submit">submit guess</button>
+  </form>
+  <h2>Puzzle: <span class="puzzle-board"></span></h2>
+  <h3>Spin Value: <span class="spin-value"></span></h3>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="lib/data.js"></script>
