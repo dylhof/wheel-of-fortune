@@ -5,9 +5,48 @@ const expect = chai.expect;
 const Game = require('../lib/Game.js');
 global.domUpdates = require('../domUpdates.js');
 
-//chai.spy.on(global.domUpdates, ['methods here'], () => true);
+chai.spy.on(global.domUpdates, ['displayWinner'], () => true);
 
 describe('Game', function() {
+  var game;
+  beforeEach(function() {
+    game = new Game([{playerName: 'Betty', roundScore: 100, totalScore: 5000}, {playerName: 'Kate', roundScore: 50, totalScore: 2500}, {playerName: 'Marvin', roundScore: 0, totalScore: 100}], [{  
+          category: 'Around The House',
+          number_of_words: 1,
+          total_number_of_letters: 8,
+          first_word: 8, 
+          description:'Location or object(s) found within a typical house.',
+          correct_answer: 'Armchair',
+        }]);
+  });
+
+  it('should have players', function() {
+    expect(game.players).to.deep.equal([{playerName: 'Betty', roundScore: 100, totalScore: 5000}, {playerName: 'Kate', roundScore: 50, totalScore: 2500}, {playerName: 'Marvin', roundScore: 0, totalScore: 100}]);
+  });
+
+  it.skip('should have a winner', function() {
+  game.displayWinner();
+  expect(game.winner).to.equal('Betty');
+  });
+
+  it.skip('should generate a puzzle at the start of the round', function() {
+  game.generatePuzzleBoard();
+  expect(game.puzzles).to.deep.equal([{  
+          category: 'Around The House',
+          number_of_words: 1,
+          total_number_of_letters: 8,
+          first_word: 8, 
+          description:'Location or object(s) found within a typical house.',
+          correct_answer: 'Armchair',
+        }]);
+  });
+
+  it.skip('should start a new round', function() {
+    expect(game.currentRound).to.equal(0);
+    game.startNewRound();
+    expect(game.currentRound).to.equal(1);
+  });
+
 
 
   
