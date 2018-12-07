@@ -1,0 +1,18 @@
+.vowel-board {
+  display: flex;
+}
+
+.vowel-div {
+  border: 2px solid black;
+  height: 30px;
+  width: 30px;
+}
+
+.vowel-p {
+  padding: 6px 3px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
