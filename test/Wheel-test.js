@@ -27,6 +27,7 @@ describe('Wheel', function() {
     wheel.spin()
     expect().to.equal();
     //Maybe spy on this to see if it is triggering a dom update? 
+    //Possibly testing if the random value is within a range?
   });
   
 })

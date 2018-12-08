@@ -8,7 +8,7 @@ const domUpdates = {
   },
 
   updateSpinValueOnDom(spinValue) {
-    $('.spin-value').text(spinValue)
+    $('.spin-value').text(spinValue);
   }
 
 }

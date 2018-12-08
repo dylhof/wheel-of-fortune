@@ -17,22 +17,33 @@ describe('Player', function() {
     expect(player.playerName).to.equal('Susan');
   });
 
-  it.skip('should reset the round score', function() {
+  it('should add spin value to roundScore', function() {
+    player.roundScore = 500;
+    player.addToRoundScore(500);
+    expect(player.roundScore).to.equal(1000)
+  })
+
+  it('should reset the round score', function() {
+    player.roundScore = 500;
     player.resetRoundScore();
+
     expect(player.roundScore).to.equal(0);
   });
 
-    it.skip('should subtract $100 from round score', function() {
+  it('should subtract $100 from round score', function() {
+    player.roundScore = 500;
     player.purchaseVowel();
-    expect(player.roundScore).to.equal();
+    expect(player.roundScore).to.equal(400);
   });
 
-    it.skip('should add the round score to the total score', function() {
+  it('should add the round score to the total score', function() {
+    player.roundScore = 500;
+    player.totalScore = 500;
     player.sumTotalScore();
-    expect(player.totalScore).to.equal();
+    expect(player.totalScore).to.equal(1000);
   });
 
-    it.skip('should toggle isTurn property boolean value', function() {
+    it('should toggle isTurn property boolean value', function() {
     expect(player.isTurn).to.equal(false);
     player.updateTurn();
     expect(player.isTurn).to.equal(true);
