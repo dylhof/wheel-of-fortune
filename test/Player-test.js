@@ -26,7 +26,6 @@ describe('Player', function() {
   it('should reset the round score', function() {
     player.roundScore = 500;
     player.resetRoundScore();
-
     expect(player.roundScore).to.equal(0);
   });
 
@@ -49,3 +48,5 @@ describe('Player', function() {
     expect(player.isTurn).to.equal(true);
   });
 });
+
+

@@ -13,5 +13,9 @@ const domUpdates = {
 
   updateRoundOnDom(round) {
     $('.current-round').text(round);
+  },
+
+  updateCurrentPlayerOnDom(player) {
+    $('.current-player').text(player);
   }
 }
