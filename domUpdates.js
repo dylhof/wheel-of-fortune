@@ -1,6 +1,6 @@
 const domUpdates = {
-  updatePuzzleBoardOnDom(currentPuzzle) {
-    $('.puzzle-board').text(currentPuzzle.correct_answer)
+  updatePuzzleBoardOnDom(currentAnswer) {
+    $('.puzzle-board').text(currentAnswer)
   },
 
   updatePuzzleCategoryOnDom(currentPuzzle){
@@ -9,6 +9,9 @@ const domUpdates = {
 
   updateSpinValueOnDom(spinValue) {
     $('.spin-value').text(spinValue);
-  }
+  },
 
+  updateRoundOnDom(round) {
+    $('.current-round').text(round);
+  }
 }
