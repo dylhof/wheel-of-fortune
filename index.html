@@ -25,7 +25,7 @@
     <div class="player-info">
     </div>
     <section class="puzzle-board-section">
-      <h2>Puzzle: <span class="puzzle-board"></span></h2>
+      <h3 class="current-round-h3">Current Round: <span class="current-round"></span></h3>
       <div class="puzzle-row-1">
         <div class="letter-card-div letter-card-div-1">
           <p class="letter-card-p letter-card-p-1"></p>
@@ -278,14 +278,11 @@
         <p class="vowel-p vowel-u">U</p>
       </div>
     </section>
-    <form class="hidden">
-      <input type="text" id="puzzle-guess">
-      <button type="submit" class="submit-guess-button">submit guess</button>
-    </form>
-    
+      <form class="solve-puzzle hidden">
+        <input type="text" id="puzzle-guess">
+        <button type="submit" class="submit-guess-button">submit guess</button>
+      </form>
     <h3 class="spin-h3">Spin Value: <span class="spin-value"></span></h3>
-    <h3>Current Round: <span class="current-round"></span></h3>
-    <h3>Current Player: <span class="current-player"></span></h3>
   </div>
   
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
