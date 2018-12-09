@@ -3,9 +3,14 @@
   src: url(fonts/Gameplay.ttf) format("truetype");
 }
 
-h1 {
+body {
   font-family: Gameplay;
+}
+
+h1 {
+  /*font-family: Gameplay;*/
   font-size: 60px;
+  margin: 20px auto;
 }
 
 .splash-screen {
@@ -26,7 +31,7 @@ h1 {
 .player-name-label,
 .player-name-input {
   width: 100%;
-  font-family: Gameplay;
+  /*font-family: Gameplay;*/
   padding: 12px;
 }
 
@@ -43,7 +48,7 @@ h1 {
 .submit-button {
   margin: 24px 40px 24px 64px;
   height: 40px;
-  font-family: Gameplay;
+  /*font-family: Gameplay;*/
 }
 
 .main-game {
@@ -62,7 +67,37 @@ h1 {
 
 .player-info-toggle {
   grid-area: players;
+  border: 2px solid black;
+  margin: 24px;
 }
+
+.player-name {
+  margin-left: 10px;
+}
+
+.round-score {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.total-score {
+  text-align: right;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
 
 .turn-option-div {
   grid-area: gameplay;
@@ -76,7 +111,12 @@ h1 {
   grid-area: spin;
 }
 
-.
+.letter-card-div {
+  display: inline-block;
+  border: 4px solid black;
+  height: 74px;
+  width: 62px;
+}
 
 
 
