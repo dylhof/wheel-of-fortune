@@ -4,7 +4,6 @@
   <title>Wheel of Fortune</title>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="fonts/Computerfont.ttf">
   <link href="fonts/Gameplay.ttf">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,10 +22,14 @@
     </form>
   </div>
   <div class="main-game">
-    <h1>Wheel of Fortune!</h1>
+    <h1 class="game-title">Wheel of Fortune!</h1>
     <div class="player-info">
     </div>
-    <button class="turn-option-button spin-button">spin</button>
+    <div class="turn-option-div">
+      <button class="turn-option-button spin-button">spin</button>
+      <button class="turn-option-button vowel-button">buy vowel</button>
+      <button class="turn-option-button solve-button">solve puzzle</button>
+    </div>
     <section class="consonant-board hidden">
       <div class="consonant-div">
         <p class="consonant-p consonant-b">B</p>
@@ -92,7 +95,6 @@
         <p class="consonant-p consonant-z">Z</p>
       </div>
     </section>
-    <button class="turn-option-button vowel-button">buy vowel</button>
     <section class="vowel-board hidden">
       <div class="vowel-div">
         <p class="vowel-p vowel-a">A</p>
@@ -110,13 +112,12 @@
         <p class="vowel-p vowel-u">U</p>
       </div>
     </section>
-    <button class="turn-option-button solve-button">solve puzzle</button>
-    <form>
+    <form class="hidden">
       <input type="text" id="puzzle-guess">
       <button type="submit" class="submit-guess-button">submit guess</button>
     </form>
     <h2>Puzzle: <span class="puzzle-board"></span></h2>
-    <h3>Spin Value: <span class="spin-value"></span></h3>
+    <h3 class="spin-h3">Spin Value: <span class="spin-value"></span></h3>
     <h3>Current Round: <span class="current-round"></span></h3>
     <h3>Current Player: <span class="current-player"></span></h3>
   </div>

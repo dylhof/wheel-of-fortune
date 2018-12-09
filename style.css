@@ -41,6 +41,44 @@ h1 {
   font-family: Gameplay;
 }
 
+.main-game {
+  display: grid;
+  grid-template-columns: .6fr 1fr 1fr;
+  grid-template-rows: 1fr 3.2fr 1fr;
+  grid-template-areas: 
+    "header header header"
+    "players gameboard gameboard"
+    "gameplay gameplay spin"
+}
+
+.game-title {
+  grid-area: header;
+}
+
+.player-info-toggle {
+  grid-area: players;
+}
+
+.turn-option-div {
+  grid-area: gameplay;
+}
+
+.puzzle-board {
+  grid-area: gameboard;
+}
+
+.spin-h3 {
+  grid-area: spin;
+}
+
+
+
+
+
+
+
+
+
 .vowel-board,
 .consonant-board {
   display: flex;
