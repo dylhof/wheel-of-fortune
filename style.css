@@ -101,6 +101,13 @@ h1 {
 
 .turn-option-div {
   grid-area: gameplay;
+  margin: 24px auto;
+}
+
+.turn-option-button {
+  height: 56px;
+  width: 240px;
+  font-size: 24px;
 }
 
 .puzzle-board-section {
