@@ -8,112 +8,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Wheel of Fortune!</h1>
-  <form>
-    <label for="player1">Player 1 Name:</label>
-    <input type="text" name="player1" id="player1" value="shannon">
-    <label for="player2">Player 2 Name:</label>
-    <input type="text" name="player2" id="player2" value="dylan">
-    <label for="player3">Player 3 Name:</label>
-    <input type="text" name="player3" id="player3" value="brittany">
-    <button type="submit" class="submit-button">Submit</button>
-  </form>
-  <div class="player-info">
+  <div class="splash-screen">
+    <h1>Wheel of Fortune!</h1>
+    <form>
+      <label for="player1">Player 1 Name:</label>
+      <input type="text" name="player1" id="player1" value="shannon">
+      <label for="player2">Player 2 Name:</label>
+      <input type="text" name="player2" id="player2" value="dylan">
+      <label for="player3">Player 3 Name:</label>
+      <input type="text" name="player3" id="player3" value="brittany">
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
   </div>
-  <button class="turn-option-button spin-button">spin</button>
-  <section class="consonant-board hidden">
-    <div class="consonant-div">
-      <p class="consonant-p consonant-b">B</p>
+  <div class="main-game">
+    <div class="player-info">
     </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-c">C</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-d">D</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-f">F</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-g">G</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-h">H</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-j">J</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-k">K</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-l">L</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-m">M</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-n">N</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-p">P</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-q">Q</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-r">R</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-s">S</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-t">T</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-v">V</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-w">W</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-x">X</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-y">Y</p>
-    </div>
-    <div class="consonant-div">
-      <p class="consonant-p consonant-z">Z</p>
-    </div>
-  </section>
-  <button class="turn-option-button vowel-button">buy vowel</button>
-  <section class="vowel-board hidden">
-    <div class="vowel-div">
-      <p class="vowel-p vowel-a">A</p>
-    </div>
-    <div class="vowel-div">
-      <p class="vowel-p vowel-e">E</p>
-    </div>
-    <div class="vowel-div">
-      <p class="vowel-p vowel-i">I</p>
-    </div>
-    <div class="vowel-div">
-      <p class="vowel-p vowel-o">O</p>
-    </div>
-    <div class="vowel-div">
-      <p class="vowel-p vowel-u">U</p>
-    </div>
-  </section>
-  <button class="turn-option-button solve-button">solve puzzle</button>
-  <form>
-    <input type="text" id="puzzle-guess">
-    <button type="submit" class="submit-guess-button">submit guess</button>
-  </form>
-  <h2>Puzzle: <span class="puzzle-board"></span></h2>
-  <h3>Spin Value: <span class="spin-value"></span></h3>
-  <h3>Current Round: <span class="current-round"></span></h3>
-  <h3>Current Player: <span class="current-player"></span></h3>
-
+    <button class="turn-option-button spin-button">spin</button>
+    <section class="consonant-board hidden">
+      <div class="consonant-div">
+        <p class="consonant-p consonant-b">B</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-c">C</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-d">D</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-f">F</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-g">G</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-h">H</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-j">J</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-k">K</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-l">L</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-m">M</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-n">N</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-p">P</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-q">Q</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-r">R</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-s">S</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-t">T</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-v">V</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-w">W</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-x">X</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-y">Y</p>
+      </div>
+      <div class="consonant-div">
+        <p class="consonant-p consonant-z">Z</p>
+      </div>
+    </section>
+    <button class="turn-option-button vowel-button">buy vowel</button>
+    <section class="vowel-board hidden">
+      <div class="vowel-div">
+        <p class="vowel-p vowel-a">A</p>
+      </div>
+      <div class="vowel-div">
+        <p class="vowel-p vowel-e">E</p>
+      </div>
+      <div class="vowel-div">
+        <p class="vowel-p vowel-i">I</p>
+      </div>
+      <div class="vowel-div">
+        <p class="vowel-p vowel-o">O</p>
+      </div>
+      <div class="vowel-div">
+        <p class="vowel-p vowel-u">U</p>
+      </div>
+    </section>
+    <button class="turn-option-button solve-button">solve puzzle</button>
+    <form>
+      <input type="text" id="puzzle-guess">
+      <button type="submit" class="submit-guess-button">submit guess</button>
+    </form>
+    <h2>Puzzle: <span class="puzzle-board"></span></h2>
+    <h3>Spin Value: <span class="spin-value"></span></h3>
+    <h3>Current Round: <span class="current-round"></span></h3>
+    <h3>Current Player: <span class="current-player"></span></h3>
+  </div>
+  
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="lib/data.js"></script>
 <script type="text/javascript" src="domUpdates.js"></script>

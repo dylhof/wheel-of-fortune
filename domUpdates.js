@@ -21,10 +21,10 @@ const domUpdates = {
   },
 
   updatePlayerInfoOnDom(players) {
+    $('.player-info-toggle').remove();
     players.forEach((player, i) => {
-      $('.player-info').append(`<p> Player ${i + 1} Name: ${player.playerName} <br /> Round Score: ${player.roundScore} <br /> Total Score: ${player.totalScore} </p>`)
+      $('.player-info').append(`<p class="player-info-toggle"> Player ${i + 1} Name: ${player.playerName} <br /> Round Score: ${player.roundScore} <br /> Total Score: ${player.totalScore} </p>`)
     })
-    
   },
 
   updateRoundScoreOnDom() {
