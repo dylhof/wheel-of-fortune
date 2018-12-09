@@ -1,6 +1,7 @@
 const domUpdates = {
   updatePuzzleBoardOnDom(currentAnswer) {
-    $('.puzzle-board').text(currentAnswer)
+
+    $('.puzzle-board').text(currentAnswer.charAt(0).toUpperCase() + currentAnswer.slice(1))
   },
 
   updatePuzzleCategoryOnDom(currentPuzzle){

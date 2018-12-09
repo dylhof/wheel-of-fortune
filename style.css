@@ -1,14 +1,18 @@
-.vowel-board {
+.vowel-board,
+.consonant-board {
   display: flex;
+  flex-direction: row;
 }
 
-.vowel-div {
+.vowel-div,
+.consonant-div {
   border: 2px solid black;
   height: 30px;
   width: 30px;
 }
 
-.vowel-p {
+.vowel-p,
+.consonant-p {
   padding: 6px 3px;
   margin: auto;
 }
