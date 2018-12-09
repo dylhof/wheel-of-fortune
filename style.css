@@ -1,5 +1,6 @@
-@font-face {  
-    src: url(fonts/Gameplay.ttf) format("truetype");
+@font-face { 
+  font-family: Gameplay;
+  src: url(fonts/Gameplay.ttf) format("truetype");
 }
 
 h1 {
