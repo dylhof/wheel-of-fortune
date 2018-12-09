@@ -4,23 +4,26 @@
   <title>Wheel of Fortune</title>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="fonts/Computerfont.ttf">
+  <link href="fonts/Gameplay.ttf">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="splash-screen">
     <h1>Wheel of Fortune!</h1>
-    <form>
-      <label for="player1">Player 1 Name:</label>
-      <input type="text" name="player1" id="player1" value="shannon">
-      <label for="player2">Player 2 Name:</label>
-      <input type="text" name="player2" id="player2" value="dylan">
-      <label for="player3">Player 3 Name:</label>
-      <input type="text" name="player3" id="player3" value="brittany">
+    <form class="splash-form">
+      <label for="player1" class="player-name-label">Player 1 Name:</label>
+      <input type="text" name="player1" class="player-name-label" id="player1" value="shannon">
+      <label for="player2" class="player-name-label">Player 2 Name:</label>
+      <input type="text" name="player2" class="player-name-label" id="player2" value="dylan">
+      <label for="player3" class="player-name-label">Player 3 Name:</label>
+      <input type="text" name="player3" class="player-name-label" id="player3" value="brittany">
       <button type="submit" class="submit-button">Submit</button>
     </form>
   </div>
   <div class="main-game">
+    <h1>Wheel of Fortune!</h1>
     <div class="player-info">
     </div>
     <button class="turn-option-button spin-button">spin</button>

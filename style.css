@@ -1,3 +1,46 @@
+h1 {
+  font-family: Gameplay;
+  font-size: 60px;
+}
+
+.splash-screen {
+  height: 500px;
+  width: 1000px;
+  text-align: center;
+  margin: 300px auto;
+}
+
+.splash-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  /*align-items: start;*/
+}
+
+.player-name-label,
+.player-name-input {
+  width: 100%;
+  font-family: Gameplay;
+  padding: 12px;
+}
+
+.player-name-label {
+  font-size: 26px;
+}
+
+#player1,
+#player2,
+#player3 {
+  font-size: 16px;
+}
+
+.submit-button {
+  margin: 24px 40px 24px 64px;
+  height: 40px;
+  font-family: Gameplay;
+}
+
 .vowel-board,
 .consonant-board {
   display: flex;
