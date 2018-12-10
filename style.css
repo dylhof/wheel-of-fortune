@@ -5,15 +5,15 @@
 }
 
 @keyframes bgscroll {
-  from {background-position: 125% 400px, 0px 0px;}
-  to {background-position: 125% 400px, 0px 2000px;} 
+  from {background-position:0px 0px;}
+  to {background-position:0px 2000px;} 
 }
 
 body {
   font-family: Gameplay;
-  background-image: url(8bitwheelsmall.png), url(8bitbackground.png);
+  background-image:url(8bitbackground.png);
   background-position: bottom right;
-  background-repeat: no-repeat, repeat-y;
+  background-repeat:repeat-y;
   animation-name: bgscroll;
   animation-duration: 300s;
   animation-timing-function: linear;
