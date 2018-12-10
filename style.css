@@ -132,13 +132,23 @@ h3 {
 .puzzle-row{
   min-width: 1025px;
 }
+
 .letter-card-div {
   display: inline-block;
   border: 4px solid black;
   height: 86px;
   width: 66px;
-  background-color: #FFF;
+  background-color: tomato;
 }
+
+/*.letter-card-p {
+  margin: 0px;
+}*/
+
+.tomato {
+  color: tomato;
+}
+
 
 .turn-option-div {
   grid-area: gameplay;
