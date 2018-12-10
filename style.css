@@ -30,10 +30,14 @@ h1 {
   /*font-family: Gameplay;*/
   font-size: 60px;
   margin: 20px auto;
-  color: #e0e0e0;
+  color: #ffc90b;
+  text-shadow: 4px 4px #7d6923;
 }
 
-
+h3 {
+  color: #ffc90b;
+  text-shadow: 5px 2px black;
+}
 
 /* splash screen */
 
@@ -120,7 +124,6 @@ h1 {
   font-size: 12px;
 }
 
-
 .current-round-h3 {
   text-align: center;
 }
@@ -135,8 +138,9 @@ h1 {
   font-size: 24px;
 }
 
-
-
+.puzzle-row{
+  min-width: 1025px;
+}
 .letter-card-div {
   display: inline-block;
   border: 4px solid black;
