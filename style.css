@@ -6,7 +6,7 @@
 
 @keyframes bgscroll {
   from {background-position: 125% 400px, 0px 0px;}
-  to {background-position: 125% 400px, 0 2000px;} 
+  to {background-position: 125% 400px, 0px 2000px;} 
 }
 
 body {
