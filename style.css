@@ -146,8 +146,11 @@ h3 {
 }*/
 
 .tomato {
-  color: tomato;
+  color: white;
+  background-color: white;
 }
+
+
 
 
 .turn-option-div {
