@@ -1,16 +1,36 @@
+/*#050c59*/
 @font-face { 
   font-family: Gameplay;
   src: url(fonts/Gameplay.ttf) format("truetype");
 }
 
+@keyframes bgscroll {
+  from {background-position: 0px 0px;}
+  to {background-position: 0 2000px;} 
+}
+
 body {
   font-family: Gameplay;
+  background-image: url(8bitbackground.png);
+  background-position: 0px 0px;
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 1px;
+  animation-name: bgscroll;
+  animation-duration: 300s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+/*
+body {
+  font-family: Gameplay;
+}*/
 
 h1 {
   /*font-family: Gameplay;*/
   font-size: 60px;
   margin: 20px auto;
+  color: #e0e0e0;
 }
 
 
@@ -37,10 +57,16 @@ h1 {
   width: 100%;
   /*font-family: Gameplay;*/
   padding: 12px;
+
 }
 
 .player-name-label {
   font-size: 26px;
+  color: #e0e0e0;
+}
+
+.player-name-input {
+  color: #000;
 }
 
 #player1,
@@ -73,6 +99,7 @@ h1 {
   grid-area: players;
   border: 2px solid black;
   margin: 24px;
+  background-color: #FFF;
 }
 
 .player-name {
@@ -115,6 +142,7 @@ h1 {
   border: 4px solid black;
   height: 86px;
   width: 66px;
+  background-color: #FFF;
 }
 
 .turn-option-div {
