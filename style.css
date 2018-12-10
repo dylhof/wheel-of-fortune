@@ -13,7 +13,7 @@ body {
   font-family: Gameplay;
   background-image:url(8bitbackground.png);
   background-position: bottom right;
-  background-repeat:repeat-y;
+  background-repeat: repeat-y;
   animation-name: bgscroll;
   animation-duration: 300s;
   animation-timing-function: linear;
@@ -88,6 +88,7 @@ h3 {
 
 .game-title {
   grid-area: header;
+  background: linear-gradient(0.25turn, #030d63, #faf7b4, #030d63);
 }
 
 .player-info-toggle {
@@ -131,14 +132,19 @@ h3 {
 
 .puzzle-row{
   min-width: 1025px;
+  display: flex;
 }
 
 .letter-card-div {
-  display: inline-block;
+  /*display: inline-block;*/
   border: 4px solid black;
   height: 86px;
   width: 66px;
   background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
 }
 
 /*.letter-card-p {
@@ -146,7 +152,7 @@ h3 {
 }*/
 
 .tomato {
-  color: white;
+  color: powderblue;
   background-color: white;
 }
 
