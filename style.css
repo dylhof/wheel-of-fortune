@@ -1,24 +1,41 @@
+/*#050c59*/
 @font-face { 
   font-family: Gameplay;
   src: url(fonts/Gameplay.ttf) format("truetype");
 }
 
+@keyframes bgscroll {
+  from {background-position:0px 0px;}
+  to {background-position:0px 2000px;} 
+}
+
 body {
   font-family: Gameplay;
+  background-image:url(8bitbackground.png);
+  background-position: bottom right;
+  background-repeat:repeat-y;
+  animation-name: bgscroll;
+  animation-duration: 300s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 h1 {
-  /*font-family: Gameplay;*/
   font-size: 60px;
   margin: 20px auto;
+  color: #ffc90b;
+  text-shadow: 4px 4px #7d6923;
 }
 
-
+h3 {
+  color: #ffc90b;
+  text-shadow: 5px 2px black;
+}
 
 /* splash screen */
 
 .splash-screen {
-  height: 500px;
+  height: 300px;
   width: 1000px;
   text-align: center;
   margin: 300px auto;
@@ -29,18 +46,22 @@ h1 {
   flex-direction: column;
   width: 300px;
   margin: 0 auto;
-  /*align-items: start;*/
 }
 
 .player-name-label,
 .player-name-input {
   width: 100%;
-  /*font-family: Gameplay;*/
   padding: 12px;
+
 }
 
 .player-name-label {
   font-size: 26px;
+  color: #e0e0e0;
+}
+
+.player-name-input {
+  color: #000;
 }
 
 #player1,
@@ -52,9 +73,9 @@ h1 {
 .submit-button {
   margin: 24px 40px 24px 64px;
   height: 40px;
-  /*font-family: Gameplay;*/
 }
 
+/*Main Game*/
 .main-game {
   display: grid;
   grid-template-columns: .6fr 1.3fr .7fr;
@@ -73,6 +94,7 @@ h1 {
   grid-area: players;
   border: 2px solid black;
   margin: 24px;
+  background-color: #FFF;
 }
 
 .player-name {
@@ -93,7 +115,6 @@ h1 {
   font-size: 12px;
 }
 
-
 .current-round-h3 {
   text-align: center;
 }
@@ -108,13 +129,15 @@ h1 {
   font-size: 24px;
 }
 
-
-
+.puzzle-row{
+  min-width: 1025px;
+}
 .letter-card-div {
   display: inline-block;
   border: 4px solid black;
   height: 86px;
   width: 66px;
+  background-color: #FFF;
 }
 
 .turn-option-div {
@@ -132,8 +155,8 @@ h1 {
 .spin-h3 {
   grid-area: spin;
   text-align: center;
+  margin-right: 20px;
 }
-
 
 .vowel-board,
 .consonant-board {
@@ -157,3 +180,4 @@ h1 {
 .hidden {
   display: none;
 }
+

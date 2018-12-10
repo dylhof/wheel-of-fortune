@@ -12,11 +12,11 @@
     <h1>Wheel of Fortune!</h1>
     <form class="splash-form">
       <label for="player1" class="player-name-label">Player 1 Name:</label>
-      <input type="text" name="player1" class="player-name-label" id="player1" value="shannon">
+      <input type="text" name="player1" class="player-name-input" id="player1" value="shannon">
       <label for="player2" class="player-name-label">Player 2 Name:</label>
-      <input type="text" name="player2" class="player-name-label" id="player2" value="dylan">
+      <input type="text" name="player2" class="player-name-input" id="player2" value="dylan">
       <label for="player3" class="player-name-label">Player 3 Name:</label>
-      <input type="text" name="player3" class="player-name-label" id="player3" value="brittany">
+      <input type="text" name="player3" class="player-name-input" id="player3" value="brittany">
       <button type="submit" class="submit-button">Submit</button>
     </form>
   </div>
@@ -26,7 +26,7 @@
     </div>
     <section class="puzzle-board-section">
       <h3 class="current-round-h3">Current Round: <span class="current-round"></span></h3>
-      <div class="puzzle-row-1">
+      <div class="puzzle-row puzzle-row-1">
         <div class="letter-card-div letter-card-div-1">
           <p class="letter-card-p letter-card-p-1"></p>
         </div>
@@ -67,7 +67,7 @@
           <p class="letter-card-p letter-card-p-13"></p>
         </div>
       </div>
-      <div class="puzzle-row-2">
+      <div class="puzzle-row puzzle-row-2">
         <div class="letter-card-div letter-card-div-14">
           <p class="letter-card-p letter-card-p-14"></p>
         </div>
@@ -108,7 +108,7 @@
           <p class="letter-card-p letter-card-p-26"></p>
         </div>
       </div>
-      <div class="puzzle-row-3">
+      <div class="puzzle-row puzzle-row-3">
         <div class="letter-card-div letter-card-div-27">
           <p class="letter-card-p letter-card-p-27"></p>
         </div>
@@ -149,7 +149,7 @@
           <p class="letter-card-p letter-card-p-39"></p>
         </div>
       </div>
-      <div class="puzzle-row-4">
+      <div class="puzzle-row puzzle-row-4">
         <div class="letter-card-div letter-card-div-40">
           <p class="letter-card-p letter-card-p-40"></p>
         </div>
@@ -278,10 +278,11 @@
         <p class="vowel-p vowel-u">U</p>
       </div>
     </section>
-      <form class="solve-puzzle hidden">
-        <input type="text" id="puzzle-guess">
-        <button type="submit" class="submit-guess-button">submit guess</button>
-      </form>
+    <form class="solve-puzzle hidden">
+      <input type="text" id="puzzle-guess">
+      <button type="submit" class="submit-guess-button">submit guess</button>
+    </form>
+   <!--  <img id="wheel" src="8bitwheel.png"> -->
     <h3 class="spin-h3">Spin Value: <span class="spin-value"></span></h3>
   </div>
   
