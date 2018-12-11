@@ -28,7 +28,6 @@ h1 {
 }
 
 h3 {
-  color: #ffc90b;
   text-shadow: 5px 2px black;
 }
 
@@ -78,8 +77,8 @@ h3 {
 /*Main Game*/
 .main-game {
   display: grid;
-  grid-template-columns: .6fr 1.3fr .7fr;
-  grid-template-rows: .6fr 3.2fr 1fr;
+  grid-template-columns: .6fr 2.6fr 1.2fr;
+  grid-template-rows: .6fr 3.2fr 2.3fr;
   grid-template-areas: 
     "header header header"
     "players gameboard gameboard"
@@ -116,18 +115,20 @@ h3 {
   font-size: 12px;
 }
 
-.current-round-h3 {
+.current-round-h3,
+.puzzle-category {
+  color: #ffc90b;
+  margin: 24px auto;
+  background: linear-gradient(0.25turn, #030d63, #faf7b4, #030d63);
+  width: 366px;
+  font-size: 32px;
+  padding: 10px 1px;
   text-align: center;
 }
 
 .puzzle-board-section {
   grid-area: gameboard;
   margin: 0 auto;
-}
-
-.puzzle-category {
-  text-align: center;
-  font-size: 24px;
 }
 
 .puzzle-row{
@@ -161,7 +162,7 @@ h3 {
 
 .turn-option-div {
   grid-area: gameplay;
-  margin: 24px auto;
+  margin: 146px auto;
 }
 
 .turn-option-button {
@@ -170,20 +171,37 @@ h3 {
   font-size: 24px;
 }
 
+.spin-div {
+  height: 400px;
+/*  margin-left: 20px;
+*/  position: relative;
+}
 
 .spin-h3 {
   grid-area: spin;
   text-align: center;
   margin-right: 20px;
+  color: #FFF;
+  position: absolute;
+  top: 166px;
+  left: 176px;
+  z-index: 1;
+}
+
+#wheel {
+  height: 400px;
+  /*position: relative;
+  top: 0px;
+  left: 0px;*/
+  z-index: 10;
 }
 
 .vowel-board,
 .consonant-board,
 .solve-puzzle-section {
   display: flex;
-  
   grid-area: gameplay;
-  margin: 24px auto;
+  margin:146px auto;
   height: 62px;
 }
 
@@ -193,6 +211,9 @@ h3 {
   height: 60px;
   width: 46px;
   background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 #puzzle-guess{
@@ -209,7 +230,7 @@ h3 {
 .consonant-p {
   padding: 6px 3px;
   margin: auto;
-  font-size: 24px;
+  font-size: 36px;
 }
 
 .hidden {
