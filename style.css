@@ -137,27 +137,23 @@ h3 {
 }
 
 .letter-card-div {
-  /*display: inline-block;*/
   border: 4px solid black;
   height: 86px;
   width: 66px;
-  background-color: tomato;
+  background-color: #27A067;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 46px;
 }
 
-/*.letter-card-p {
-  margin: 0px;
-}*/
-
 .tomato {
-  color: powderblue;
   background-color: white;
 }
 
-
+.superhidden: first-child {
+  display: none;
+}
 
 
 .turn-option-div {
