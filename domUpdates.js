@@ -6,7 +6,7 @@ const domUpdates = {
   },
 
   updatePuzzleCategoryOnDom(currentPuzzleCategory){
-    $('.puzzle-board-section').append(`<h3 class="puzzle-category">${currentPuzzleCategory}</h3>`);
+    $('.puzzle-category').replaceWith(`<h3 class="puzzle-category">${currentPuzzleCategory}</h3>`);
   },
 
   updateSpinValueOnDom(spinValue) {
