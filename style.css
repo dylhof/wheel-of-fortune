@@ -178,22 +178,38 @@ h3 {
 }
 
 .vowel-board,
-.consonant-board {
+.consonant-board,
+.solve-puzzle-section {
   display: flex;
-  flex-direction: row;
+  
+  grid-area: gameplay;
+  margin: 24px auto;
+  height: 62px;
 }
 
 .vowel-div,
 .consonant-div {
   border: 2px solid black;
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 46px;
+  background-color: #FFF;
+}
+
+#puzzle-guess{
+  height: 58px;
+  width: 300px;
+  font-size: 24px;
+}
+
+.submit-guess-button {
+  height: 60px;
 }
 
 .vowel-p,
 .consonant-p {
   padding: 6px 3px;
   margin: auto;
+  font-size: 24px;
 }
 
 .hidden {
