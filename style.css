@@ -151,8 +151,9 @@ h3 {
   background-color: white;
 }
 
-.superhidden: first-child {
-  display: none;
+.hyphen {
+  color: #000;
+  
 }
 
 
