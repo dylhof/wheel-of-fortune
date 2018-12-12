@@ -151,12 +151,6 @@ h3 {
   background-color: white;
 }
 
-.hyphen {
-  color: #000;
-  
-}
-
-
 .turn-option-div {
   grid-area: gameplay;
   margin: 146px auto;
