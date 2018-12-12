@@ -52,6 +52,11 @@ const domUpdates = {
   resetPuzzleBoard() {
     $('.letter-card-div').removeClass('puzzle-card');
     $('.letter-card-div').empty();
+  },
+
+  addHiddenLetters(letter, row) {
+    $(`.letter-card-div-${row}`).append(`<p class="hidden" data-value=${letter}>${letter}</p>`).addClass('puzzle-card');
+
   }
 
 }
