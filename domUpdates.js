@@ -24,11 +24,19 @@ const domUpdates = {
   updatePlayerInfoOnDom(players) {
     $('.player-info-toggle').remove();
     players.forEach((player, i) => {
-      $('.player-info').append(`<div class="player-info-toggle"> <p class="player-name"> ${player.playerName} </p><p class="round-score player${i}-score"> $${player.roundScore} </p> <p class="total-score"> Grand Total: $${player.totalScore} </p></div>`)
+      $('.player-info').append(`<div class="player-info-toggle"> <p class="player-name player-name-${i}"> ${player.playerName} </p><p class="round-score player${i}-score"> $${player.roundScore} </p> <p class="total-score"> Grand Total: $${player.totalScore} </p></div>`)
     })
   },
 
   updateRoundScoreOnDom(i, currentScore) {
     $(`.player${i}-score`).text(`$${currentScore}`);
+  },
+
+  addPlayerTurnClassOnDom(currentplayer) {
+    $(`.player-name-${currentplayer}`).addClass('player-turn-indication');
+  },
+
+  removePlayerTurnClassOnDom(currentPlayer) {
+    $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
   }
 }
