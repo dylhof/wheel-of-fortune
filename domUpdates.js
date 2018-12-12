@@ -47,6 +47,11 @@ const domUpdates = {
 
   showCorrectGuessLetter(letter) {
     $(`[data-value = ${letter}]`).removeClass('hidden');
+  },
+
+  resetPuzzleBoard() {
+    $('.letter-card-div').removeClass('puzzle-card');
+    $('.letter-card-div').empty();
   }
 
 }
