@@ -16,11 +16,6 @@ const domUpdates = {
     $('.current-round').text(round);
   },
 
-  updateCurrentPlayer(player) {
-    // $('.current-player').text(player);
-    console.log('Current Player: ',player);
-  },
-
   updatePlayerInfo(players) {
     $('.player-info-toggle').remove();
     players.forEach((player, i) => {
