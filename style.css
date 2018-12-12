@@ -9,6 +9,17 @@
   to {background-position:0px 2000px;} 
 }
 
+@keyframes pulse {
+  from {
+    font-size: 24px;
+    color: #030d63;
+  }
+  to { 
+    font-size: 28px;
+    color: #ffc90b;
+  }
+}
+
 body {
   font-family: Gameplay;
   background-image:url(8bitbackground.png);
@@ -99,6 +110,16 @@ h3 {
 
 .player-name {
   margin-left: 10px;
+  min-width: 200px;
+  height: 30px;
+}
+
+.my-turn {
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .round-score {
