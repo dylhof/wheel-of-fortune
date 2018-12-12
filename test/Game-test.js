@@ -52,7 +52,7 @@ describe('Game', function() {
   expect(game.winner).to.equal('Betty');
   });
 
-  it.skip('should start a new round', function() {
+  it('should start a new round', function() {
     player1.roundScore = 500;
     player2.roundScore = 600;
     player3.roundScore = 7000;
