@@ -38,5 +38,11 @@ const domUpdates = {
 
   removePlayerTurnClassOnDom(currentPlayer) {
     $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
+  },
+
+  showDelimiters(positionOnBoard) {
+    $(`.letter-card-div-${positionOnBoard}`).children().removeClass('hidden');
+    $(`.letter-card-div-${positionOnBoard}`).css({"background-color": "#27A067"});
   }
+
 }
