@@ -1,42 +1,42 @@
 const domUpdates = {
-  updatePuzzleBoardOnDom(currentAnswer) {
+  updatePuzzleBoard(currentAnswer) {
     // $('.puzzle-board').text(currentAnswer.charAt(0).toUpperCase() + currentAnswer.slice(1))
     console.log('Current answer: ',currentAnswer.charAt(0).toUpperCase() + currentAnswer.slice(1));
   },
 
-  updatePuzzleCategoryOnDom(currentPuzzleCategory){
+  updatePuzzleCategory(currentPuzzleCategory){
     $('.puzzle-category').replaceWith(`<h3 class="puzzle-category">${currentPuzzleCategory}</h3>`);
   },
 
-  updateSpinValueOnDom(spinValue) {
+  updateSpinValue(spinValue) {
     $('.spin-value').text(spinValue);
   },
 
-  updateRoundOnDom(round) {
+  updateRound(round) {
     $('.current-round').text(round);
   },
 
-  updateCurrentPlayerOnDom(player) {
+  updateCurrentPlayer(player) {
     // $('.current-player').text(player);
     console.log('Current Player: ',player);
   },
 
-  updatePlayerInfoOnDom(players) {
+  updatePlayerInfo(players) {
     $('.player-info-toggle').remove();
     players.forEach((player, i) => {
       $('.player-info').append(`<div class="player-info-toggle"> <p class="player-name player-name-${i}"> ${player.playerName} </p><p class="round-score player${i}-score"> $${player.roundScore} </p> <p class="total-score"> Grand Total: $${player.totalScore} </p></div>`)
     })
   },
 
-  updateRoundScoreOnDom(i, currentScore) {
+  updateRoundScore(i, currentScore) {
     $(`.player${i}-score`).text(`$${currentScore}`);
   },
 
-  addPlayerTurnClassOnDom(currentplayer) {
+  addPlayerTurnClass(currentplayer) {
     $(`.player-name-${currentplayer}`).addClass('player-turn-indication');
   },
 
-  removePlayerTurnClassOnDom(currentPlayer) {
+  removePlayerTurnClass(currentPlayer) {
     $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
   },
 
