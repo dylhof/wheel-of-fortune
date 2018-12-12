@@ -43,6 +43,10 @@ const domUpdates = {
   showDelimiters(positionOnBoard) {
     $(`.letter-card-div-${positionOnBoard}`).children().removeClass('hidden');
     $(`.letter-card-div-${positionOnBoard}`).css({"background-color": "#27A067"});
+  },
+
+  showCorrectGuessLetter(letter) {
+    $(`[data-value = ${letter}]`).removeClass('hidden');
   }
 
 }
