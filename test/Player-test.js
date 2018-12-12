@@ -42,11 +42,6 @@ describe('Player', function() {
     expect(player.totalScore).to.equal(1000);
   });
 
-    it('should toggle isTurn property boolean value', function() {
-    expect(player.isTurn).to.equal(false);
-    player.updateTurn();
-    expect(player.isTurn).to.equal(true);
-  });
 });
 
 

@@ -21,6 +21,10 @@ describe('Game', function() {
         }]);
   });
 
+  afterEach(function() {
+    chai.spy.restore(global.domUpdates);
+  });
+
   it('should have players', function() {
     expect(game.players).to.deep.equal([{playerName: 'Betty', roundScore: 100, totalScore: 5000}, {playerName: 'Kate', roundScore: 50, totalScore: 2500}, {playerName: 'Marvin', roundScore: 0, totalScore: 100}]);
   });
@@ -28,18 +32,6 @@ describe('Game', function() {
   it.skip('should have a winner', function() {
   game.displayWinner();
   expect(game.winner).to.equal('Betty');
-  });
-
-  it.skip('should generate a puzzle at the start of the round', function() {
-  game.generatePuzzleBoard();
-  expect(game.puzzles).to.deep.equal([{  
-          category: 'Around The House',
-          number_of_words: 1,
-          total_number_of_letters: 8,
-          first_word: 8, 
-          description:'Location or object(s) found within a typical house.',
-          correct_answer: 'Armchair',
-        }]);
   });
 
   it.skip('should start a new round', function() {
@@ -51,7 +43,17 @@ describe('Game', function() {
   it('should find the current correct answer and split it into an array of letters', function() {
     game.generatePuzzleArray(0);
     expect(game.currentAnswer).to.equal('armchair');
-  })
+    expect(game.answerLettersArray).to.deep.equal([['a', 'r', 'm', 'c', 'h', 'a', 'i', 'r']]);
+  });
+
+  it.skip('should add hidden letters once', function() {
+    game.generatePuzzleArray(0);
+    game.populatePuzzleBoard();
+    expect(domUpdates.addHiddenLetters).to.have.been.called(1);
+  });
+
+
+
 
   
 })
