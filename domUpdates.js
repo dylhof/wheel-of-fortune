@@ -31,5 +31,13 @@ const domUpdates = {
   updateRoundScoreOnDom(i, currentScore) {
     $(`.player${i}-score`).text(`$${currentScore}`);
     console.log(currentScore);
+  },
+
+  addPlayerTurnClassOnDom(currentplayer) {
+    $(`.player-name-${currentplayer}`).addClass('player-turn-indication');
+  },
+
+  removePlayerTurnClassOnDom(currentPlayer) {
+    $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
   }
 }

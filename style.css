@@ -114,7 +114,7 @@ h3 {
   height: 30px;
 }
 
-.my-turn {
+.player-turn-indication {
   animation-name: pulse;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
