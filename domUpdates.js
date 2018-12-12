@@ -30,6 +30,5 @@ const domUpdates = {
 
   updateRoundScoreOnDom(i, currentScore) {
     $(`.player${i}-score`).text(`$${currentScore}`);
-    console.log(currentScore); // error? grand total being reassigned to its round
   }
 }
