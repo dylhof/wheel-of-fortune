@@ -52,6 +52,13 @@ const domUpdates = {
   addHiddenLetters(letter, row) {
     $(`.letter-card-div-${row}`).append(`<p class="hidden" data-value=${letter}>${letter}</p>`).addClass('puzzle-card');
 
+  },
+
+  showNewRoundInfo(currentRound, players, currentPlayer) {
+    domUpdates.resetPuzzleBoard();
+    domUpdates.updateRound(currentRound);
+    domUpdates.updatePlayerInfo(players);
+    domUpdates.addPlayerTurnClass(currentPlayer);
   }
 
 }
