@@ -16,6 +16,7 @@ describe('Game', function() {
     'addPlayerTurnClass', 
     'displayWinner',
     'removePlayerTurnClass', 
+    'resetGuessedLetters',
     'resetPuzzleBoard', 
     'showCorrectGuessLetter',
     'showNewRoundInfo',
