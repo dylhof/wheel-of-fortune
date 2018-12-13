@@ -11,30 +11,30 @@
 
 @keyframes pulse {
   from {
-    font-size: 24px;
     color: #030d63;
+    font-size: 24px;
   }
   to { 
-    font-size: 28px;
     color: #ffc90b;
+    font-size: 28px;
   }
 }
 
 body {
-  font-family: Gameplay;
-  background-image:url(8bitbackground.png);
+  animation-duration: 300s;
+  animation-iteration-count: infinite;
+  animation-name: bgscroll;
+  animation-timing-function: linear;
+  background-image:url(images/8bitbackground.png);
   background-position: bottom right;
   background-repeat: repeat-y;
-  animation-name: bgscroll;
-  animation-duration: 300s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  font-family: Gameplay;
 }
 
 h1 {
+  color: #ffc90b;
   font-size: 60px;
   margin: 20px auto;
-  color: #ffc90b;
   text-shadow: 4px 4px #7d6923;
 }
 
@@ -46,28 +46,28 @@ h3 {
 
 .splash-screen {
   height: 300px;
-  width: 1000px;
-  text-align: center;
   margin: 300px auto;
+  text-align: center;
+  width: 1000px;
 }
 
 .splash-form {
   display: flex;
   flex-direction: column;
-  width: 300px;
   margin: 0 auto;
+  width: 300px;
 }
 
 .player-name-label,
 .player-name-input {
-  width: 100%;
   padding: 12px;
+  width: 100%;
 
 }
 
 .player-name-label {
-  font-size: 26px;
   color: #e0e0e0;
+  font-size: 26px;
 }
 
 .player-name-input {
@@ -81,84 +81,84 @@ h3 {
 }
 
 .submit-button {
-  margin: 24px 40px 24px 64px;
   height: 40px;
+  margin: 24px 40px 24px 64px;
 }
 
 /*Main Game*/
 .main-game {
   display: grid;
-  grid-template-columns: .6fr 2.6fr 1.2fr;
-  grid-template-rows: .6fr 3.2fr 2.3fr;
   grid-template-areas: 
     "header header header"
     "players gameboard gameboard"
     "gameplay gameplay spin"
+  grid-template-columns: .6fr 2.6fr 1.2fr;
+  grid-template-rows: .6fr 3.2fr 2.3fr;
 }
 
 .game-title {
-  grid-area: header;
   background: linear-gradient(0.25turn, #030d63, #faf7b4, #030d63);
+  grid-area: header;
 }
 
 .player-info{
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .quit-game {
-  grid-area: players;
-  height: 30px;
   background-color: #ffcf08;
   border: 1px solid #887426;
+  grid-area: players;
+  height: 30px;
   width: 200px;
 }
 
 .player-info-toggle {
-  grid-area: players;
-  border: 2px solid black;
-  margin: 24px;
   background-color: #FFF;
+  border: 2px solid black;
+  grid-area: players;
+  margin: 24px;
 }
 
 .player-name {
+  height: 30px;
   margin-left: 10px;
   min-width: 200px;
-  height: 30px;
 }
 
 .player-turn-indication {
-  animation-name: pulse;
-  animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
 }
 
 .round-score {
   background-color: grey;
   color: white;
-  padding: 10px;
   font-size: 24px;
+  padding: 10px;
   text-align: center;
 }
 
 .total-score {
-  text-align: right;
-  margin-right: 10px;
   font-size: 12px;
+  margin-right: 10px;
+  text-align: right;
 }
 
 .current-round-h3,
 .puzzle-category {
-  color: #ffc90b;
-  margin: 24px auto;
   background: linear-gradient(0.25turn, #030d63, #faf7b4, #030d63);
-  width: 366px;
+  color: #ffc90b;
   font-size: 32px;
+  margin: 24px auto;
   padding: 10px 1px;
   text-align: center;
+  width: 366px;
 }
 
 .puzzle-board-section {
@@ -167,19 +167,19 @@ h3 {
 }
 
 .puzzle-row{
-  min-width: 1025px;
   display: flex;
+  min-width: 1025px;
 }
 
 .letter-card-div {
-  border: 4px solid black;
-  height: 86px;
-  width: 66px;
-  background-color: #27A067;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #27A067;
+  border: 4px solid #000;
+  display: flex;
   font-size: 46px;
+  height: 86px;
+  justify-content: center;
+  width: 66px;
 }
 
 .puzzle-card {
@@ -192,33 +192,29 @@ h3 {
 }
 
 .turn-option-button {
+  font-size: 24px;
   height: 56px;
   width: 240px;
-  font-size: 24px;
 }
 
 .spin-div {
   height: 400px;
-/*  margin-left: 20px;
-*/  position: relative;
+  position: relative;
 }
 
 .spin-h3 {
-  grid-area: spin;
-  text-align: center;
-  margin-right: 20px;
   color: #FFF;
-  position: absolute;
-  top: 166px;
+  grid-area: spin;
   left: 176px;
+  margin-right: 20px;
+  position: absolute;
+  text-align: center;
+  top: 166px;
   z-index: 1;
 }
 
 #wheel {
   height: 400px;
-  /*position: relative;
-  top: 0px;
-  left: 0px;*/
   z-index: 10;
 }
 
@@ -227,25 +223,25 @@ h3 {
 .solve-puzzle-section {
   display: flex;
   grid-area: gameplay;
-  margin:146px auto;
   height: 62px;
+  margin:146px auto;
 }
 
 .vowel-div,
 .consonant-div {
-  border: 2px solid black;
-  height: 60px;
-  width: 46px;
-  background-color: #FFF;
-  display: flex;
-  justify-content: center;
   align-content: center;
+  background-color: #FFF;
+  border: 2px solid black;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  width: 46px;
 }
 
 #puzzle-guess{
+  font-size: 24px;
   height: 58px;
   width: 300px;
-  font-size: 24px;
 }
 
 .submit-guess-button {
@@ -254,9 +250,9 @@ h3 {
 
 .vowel-p,
 .consonant-p {
-  padding: 6px 3px;
-  margin: auto;
   font-size: 36px;
+  margin: auto;
+  padding: 6px 3px;
 }
 
 .hidden {
