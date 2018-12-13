@@ -256,6 +256,10 @@ h3 {
   padding: 6px 3px;
 }
 
+.guessed-letter {
+  background-color: #000;
+}
+
 .play-another-button {
   width: 300px;
 }

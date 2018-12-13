@@ -18,6 +18,11 @@ const domUpdates = {
     $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
   },
 
+  resetGuessedLetters() {
+    $('.consonant-div').removeClass('guessed-letter');
+    $('.vowel-div').removeClass('guessed-letter');
+  },
+
   resetPuzzleBoard() {
     $('.letter-card-div').removeClass('puzzle-card');
     $('.letter-card-div').empty();
