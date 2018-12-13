@@ -30,4 +30,11 @@ describe('Wheel', function() {
     wheel.spin();
     expect(domUpdates.updateSpinValue).to.have.been.called(1);
   });
+
+  it('should generate different bonus wheel arrays each time', function() {
+    let newbonuswheel = new BonusWheel();
+    bonuswheel.generateBonusWheelValues();
+    newbonuswheel.generateBonusWheelValues();
+    expect(bonuswheel.wheelValues).to.not.equal(newbonuswheel.wheelValues);
+  });
 })
