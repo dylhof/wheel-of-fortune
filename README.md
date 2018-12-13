@@ -3,7 +3,7 @@
 
 The 'Game Time' project challenged us to recreate the classic gameshow Wheel of Fortune.  With four rounds where three players can compete to guess the hidden word puzzle, our game is a 8bit themed take on Wheel of Fortune offering three options to the competitors.  They can spin the wheel to accumulate money and guess a letter, buy a vowel, or take their chances to solve the puzzle and add their money to their grand total.  The person with the highest grand total at the end gets to play a bonus round and wins the game. 
 
-To try your hand at our game, find a few friends and follow this link LINK HERE!
+To try your hand at our game, find a few friends and follow this link https://dylhof.github.io/wheel-of-fortune/!
 
 If you would like to contribute to our project follow these instructions to clone the code: 
   1. fork the repo
