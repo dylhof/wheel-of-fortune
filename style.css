@@ -22,7 +22,7 @@
 
 body {
   font-family: Gameplay;
-  background-image:url(8bitbackground.png);
+  background-image:url(images/8bitbackground.png);
   background-position: bottom right;
   background-repeat: repeat-y;
   animation-name: bgscroll;
