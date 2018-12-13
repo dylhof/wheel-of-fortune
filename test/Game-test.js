@@ -10,20 +10,20 @@ global.domUpdates = require('../domUpdates.js');
 
 describe('Game', function() {
   var game;
-
   beforeEach(function() {
   chai.spy.on(global.domUpdates, [
-    'displayWinner',
-    'updatePuzzleBoard',
-    'updatePuzzleCategory',
     'addHiddenLetters',
     'addPlayerTurnClass', 
+    'displayWinner',
     'removePlayerTurnClass', 
-    'updateCurrentPlayer', 
     'resetPuzzleBoard', 
-    'updateRound', 
+    'showCorrectGuessLetter',
+    'showNewRoundInfo',
     'updatePlayerInfo',
-    'showNewRoundInfo'
+    'updatePuzzleBoard',
+    'updatePuzzleCategory',
+    'updateRound', 
+    'updateRoundScore'
     ], () => true);
     player1 = new Player('Betty');
     player2 = new Player('Kate');
@@ -37,8 +37,8 @@ describe('Game', function() {
           description:'Location or object(s) found within a typical house.',
           correct_answer: 'Armchair',
         }]);
+    game.generatePuzzleArray(0);
   });
-
   afterEach(function() {
     chai.spy.restore(global.domUpdates);
   });
@@ -68,7 +68,6 @@ describe('Game', function() {
   });
 
   it('should find the current correct answer and split it into an array of letters', function() {
-    game.generatePuzzleArray(0);
     expect(game.currentAnswer).to.equal('armchair');
     expect(domUpdates.updatePuzzleBoard).to.have.been.called(1);
     expect(domUpdates.updatePuzzleCategory).to.have.been.called(1);
@@ -76,7 +75,6 @@ describe('Game', function() {
   });
 
   it('should add hidden letters once', function() {
-    game.generatePuzzleArray(0);
     game.populatePuzzleBoard();
     expect(domUpdates.addHiddenLetters).to.have.been.called(8);
   });
@@ -92,7 +90,6 @@ describe('Game', function() {
   });
 
   it('should check the answer given by player 1 and, if correct, update the player 1 total score', function() {
-    game.generatePuzzleArray(0);
     player1.totalScore = 0;
     player1.roundScore = 500;
     game.checkPlayerAnswer('Armchair');
@@ -100,21 +97,24 @@ describe('Game', function() {
   })
 
   it('should check the answer given by player 1 and, if wrong, update the current player', function() {
-    game.generatePuzzleArray(0);
     player1.totalScore = 0;
     player1.roundScore = 500;
     game.checkPlayerAnswer('blueArmchair');
     expect(game.currentPlayer).to.equal(1)
   })
 
-  it('should check letter answer', function() {
-    game.checkLetterAnswer('m');
+  it('should check if the letter answer is correct, if correct, update the player 1 round score', function() {
     player1.roundScore = 0;
-
-    
+    game.newRoundWheel.currentSpin = 500;
+    game.checkLetterAnswer('m');
+    expect(player1.roundScore).to.equal(500);
+    expect(domUpdates.updateRoundScore).to.have.been.called(1);
+    expect(domUpdates.showCorrectGuessLetter).to.have.been.called(1);
   })
 
+  it('should check if the letter answer is correct, if wrong, update the current player', function() {
+    game.checkLetterAnswer('z');
+    expect(game.currentPlayer).to.equal(1);
+  })
 
-
-  
 })
