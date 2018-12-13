@@ -1,29 +1,7 @@
 const domUpdates = {
-  updatePuzzleBoard(currentAnswer) {
-    console.log('Current answer: ',currentAnswer.charAt(0).toUpperCase() + currentAnswer.slice(1));
-  },
 
-  updatePuzzleCategory(currentPuzzleCategory){
-    $('.puzzle-category').replaceWith(`<h3 class="puzzle-category">${currentPuzzleCategory}</h3>`);
-  },
-
-  updateSpinValue(spinValue) {
-    $('.spin-value').text(spinValue);
-  },
-
-  updateRound(round) {
-    $('.current-round').text(round);
-  },
-
-  updatePlayerInfo(players) {
-    $('.player-info-toggle').remove();
-    players.forEach((player, i) => {
-      $('.player-info').append(`<div class="player-info-toggle"> <p class="player-name player-name-${i}"> ${player.playerName} </p><p class="round-score player${i}-score"> $${player.roundScore} </p> <p class="total-score"> Grand Total: $${player.totalScore} </p></div>`)
-    })
-  },
-
-  updateRoundScore(i, currentScore) {
-    $(`.player${i}-score`).text(`$${currentScore}`);
+  addHiddenLetters(letter, row) {
+    $(`.letter-card-div-${row}`).append(`<p class="hidden" data-value=${letter}>${letter}</p>`).addClass('puzzle-card');
   },
 
   addPlayerTurnClass(currentplayer) {
@@ -34,23 +12,18 @@ const domUpdates = {
     $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
   },
 
-  showDelimiters(positionOnBoard) {
-    $(`.letter-card-div-${positionOnBoard}`).children().removeClass('hidden');
-    $(`.letter-card-div-${positionOnBoard}`).css({"background-color": "#27A067"});
+  resetPuzzleBoard() {
+    $('.letter-card-div').removeClass('puzzle-card');
+    $('.letter-card-div').empty();
   },
 
   showCorrectGuessLetter(letter) {
     $(`[data-value = ${letter}]`).removeClass('hidden');
   },
 
-  resetPuzzleBoard() {
-    $('.letter-card-div').removeClass('puzzle-card');
-    $('.letter-card-div').empty();
-  },
-
-  addHiddenLetters(letter, row) {
-    $(`.letter-card-div-${row}`).append(`<p class="hidden" data-value=${letter}>${letter}</p>`).addClass('puzzle-card');
-
+  showDelimiters(positionOnBoard) {
+    $(`.letter-card-div-${positionOnBoard}`).children().removeClass('hidden');
+    $(`.letter-card-div-${positionOnBoard}`).css({"background-color": "#27A067"});
   },
 
   showNewRoundInfo(currentRound, players, currentPlayer) {
@@ -58,6 +31,28 @@ const domUpdates = {
     domUpdates.updateRound(currentRound);
     domUpdates.updatePlayerInfo(players);
     domUpdates.addPlayerTurnClass(currentPlayer);
-  }
+  },
 
-}
+  updatePlayerInfo(players) {
+    $('.player-info-toggle').remove();
+    players.forEach((player, i) => {
+      $('.player-info').append(`<div class="player-info-toggle"> <p class="player-name player-name-${i}"> ${player.playerName} </p><p class="round-score player${i}-score"> $${player.roundScore} </p> <p class="total-score"> Grand Total: $${player.totalScore} </p></div>`)
+    })
+  },
+
+  updatePuzzleCategory(currentPuzzleCategory){
+    $('.puzzle-category').replaceWith(`<h3 class="puzzle-category">${currentPuzzleCategory}</h3>`);
+  },
+  
+  updateRound(round) {
+    $('.current-round').text(round);
+  },
+
+  updateRoundScore(i, currentScore) {
+    $(`.player${i}-score`).text(`$${currentScore}`);
+  },
+
+  updateSpinValue(spinValue) {
+    $('.spin-value').text(spinValue);
+  }
+};
