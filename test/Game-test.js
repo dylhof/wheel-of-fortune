@@ -5,6 +5,7 @@ const expect = chai.expect;
 const Game = require('../lib/Game.js');
 global.Player = require('../lib/Player.js');
 global.Wheel = require('../lib/Wheel.js');
+global.data = require('../lib/data.js');
 global.domUpdates = require('../domUpdates.js');
 
 describe('Game', function() {
@@ -90,7 +91,7 @@ describe('Game', function() {
     expect(game.currentPlayer).to.equal(0);
   });
 
-  it.skip('should check the answer given by player 1 and, if correct, update the player 1 total score', function() {
+  it('should check the answer given by player 1 and, if correct, update the player 1 total score', function() {
     game.generatePuzzleArray(0);
     player1.totalScore = 0;
     player1.roundScore = 500;
