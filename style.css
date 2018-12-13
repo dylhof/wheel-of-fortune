@@ -88,12 +88,12 @@ h3 {
 /*Main Game*/
 .main-game {
   display: grid;
+  grid-template-columns: .6fr 2.6fr 1.2fr;
+  grid-template-rows: .6fr 3.2fr 2.3fr;
   grid-template-areas: 
     "header header header"
     "players gameboard gameboard"
     "gameplay gameplay spin"
-  grid-template-columns: .6fr 2.6fr 1.2fr;
-  grid-template-rows: .6fr 3.2fr 2.3fr;
 }
 
 .game-title {
