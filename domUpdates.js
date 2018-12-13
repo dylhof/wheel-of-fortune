@@ -8,6 +8,12 @@ const domUpdates = {
     $(`.player-name-${currentplayer}`).addClass('player-turn-indication');
   },
 
+  displayWinnerScreen(winnerName) {
+    $('.main-game').hide();
+    $('.winner-screen').show();
+    $('.winner-name').text(`${winnerName} is the winner!`);
+  },
+
   removePlayerTurnClass(currentPlayer) {
     $(`.player-name-${currentPlayer}`).removeClass('player-turn-indication');
   },

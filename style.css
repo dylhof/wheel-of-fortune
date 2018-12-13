@@ -44,7 +44,8 @@ h3 {
 
 /* splash screen */
 
-.splash-screen {
+.splash-screen,
+.winner-screen {
   height: 300px;
   margin: 300px auto;
   text-align: center;
@@ -253,6 +254,10 @@ h3 {
   font-size: 36px;
   margin: auto;
   padding: 6px 3px;
+}
+
+.play-another-button {
+  width: 300px;
 }
 
 .hidden {
