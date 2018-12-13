@@ -46,7 +46,7 @@ const domUpdates = {
     })
   },
 
-  updatePuzzleCategory(currentPuzzleCategory){
+  updatePuzzleCategory(currentPuzzleCategory) {
     $('.puzzle-category').replaceWith(`<h3 class="puzzle-category">${currentPuzzleCategory}</h3>`);
   },
   

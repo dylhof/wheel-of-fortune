@@ -11,32 +11,32 @@ global.domUpdates = require('../domUpdates.js');
 describe('Game', function() {
   var game;
   beforeEach(function() {
-  chai.spy.on(global.domUpdates, [
-    'addHiddenLetters',
-    'addPlayerTurnClass', 
-    'displayWinner',
-    'removePlayerTurnClass', 
-    'resetPuzzleBoard', 
-    'showCorrectGuessLetter',
-    'showNewRoundInfo',
-    'updatePlayerInfo',
-    'updatePuzzleBoard',
-    'updatePuzzleCategory',
-    'updateRound', 
-    'updateRoundScore'
+    chai.spy.on(global.domUpdates, [
+      'addHiddenLetters',
+      'addPlayerTurnClass', 
+      'displayWinner',
+      'removePlayerTurnClass', 
+      'resetPuzzleBoard', 
+      'showCorrectGuessLetter',
+      'showNewRoundInfo',
+      'updatePlayerInfo',
+      'updatePuzzleBoard',
+      'updatePuzzleCategory',
+      'updateRound', 
+      'updateRoundScore'
     ], () => true);
     player1 = new Player('Betty');
     player2 = new Player('Kate');
     player3 = new Player('Marvin');
     players = [player1, player2, player3];
     game = new Game(players, [{  
-          category: 'Around The House',
-          number_of_words: 1,
-          total_number_of_letters: 8,
-          first_word: 8, 
-          description:'Location or object(s) found within a typical house.',
-          correct_answer: 'Armchair',
-        }]);
+      category: 'Around The House',
+      number_of_words: 1,
+      total_number_of_letters: 8,
+      first_word: 8, 
+      description: 'Location or object(s) found within a typical house.',
+      correct_answer: 'Armchair',
+    }]);
     game.generatePuzzleArray(0);
   });
   afterEach(function() {
@@ -49,8 +49,8 @@ describe('Game', function() {
   });
 
   it.skip('should have a winner', function() {
-  game.displayWinner();
-  expect(game.winner).to.equal('Betty');
+    game.displayWinner();
+    expect(game.winner).to.equal('Betty');
   });
 
   it('should start a new round', function() {
