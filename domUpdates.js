@@ -1,6 +1,5 @@
 const domUpdates = {
   updatePuzzleBoard(currentAnswer) {
-    // $('.puzzle-board').text(currentAnswer.charAt(0).toUpperCase() + currentAnswer.slice(1))
     console.log('Current answer: ',currentAnswer.charAt(0).toUpperCase() + currentAnswer.slice(1));
   },
 
