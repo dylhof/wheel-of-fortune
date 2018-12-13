@@ -31,10 +31,10 @@ describe('Wheel', function() {
     expect(domUpdates.updateSpinValue).to.have.been.called(1);
   });
 
-  it('should generate different bonus wheel arrays each time', function() {
-    let newbonuswheel = new BonusWheel();
-    bonuswheel.generateBonusWheelValues();
-    newbonuswheel.generateBonusWheelValues();
-    expect(bonuswheel.wheelValues).to.not.equal(newbonuswheel.wheelValues);
+  it('should generate different wheel arrays each time', function() {
+    let newwheel = new Wheel();
+    wheel.generateWheelValues();
+    newwheel.generateWheelValues();
+    expect(wheel.wheelValues).to.not.equal(newwheel.wheelValues);
   });
 })
