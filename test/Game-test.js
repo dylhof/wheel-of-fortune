@@ -15,6 +15,7 @@ describe('Game', function() {
     'addHiddenLetters',
     'addPlayerTurnClass', 
     'displayWinner',
+    'displayWinnerScreen',
     'removePlayerTurnClass', 
     'resetGuessedLetters',
     'resetPuzzleBoard', 
@@ -49,9 +50,9 @@ describe('Game', function() {
     expect(game.players).to.deep.equal([{playerName: 'Betty', roundScore: 0, totalScore: 0}, {playerName: 'Kate', roundScore: 0, totalScore: 0}, {playerName: 'Marvin', roundScore: 0, totalScore: 0}]);
   });
 
-  it.skip('should have a winner', function() {
+  it('should have a winner', function() {
   game.displayWinner();
-  expect(game.winner).to.equal('Betty');
+  expect(domUpdates.displayWinnerScreen).to.have.been.called(1);
   });
 
   it('should start a new round', function() {
